@@ -20,7 +20,11 @@
     - name: Disk Size
       ansible.builtin.debug:
         msg: "The disk size of the system is {{ ansible_mounts[0].size_total / 1000000000 }} GiB"
-        
+
+    - name: Memory
+      ansible.builtin.debug:
+        msg: "The system has {{ ansible_memory_mb['real']['total'] / 1000 }} GiB of ram"
+
     - name: Process Cores
       ansible.builtin.debug:
         msg: "The system has  ansible_facts['processor_cores']  cores"
