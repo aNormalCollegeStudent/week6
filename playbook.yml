@@ -23,5 +23,5 @@
         
     - name: Process Cores
       ansible.builtin.debug:
-        msg: "The system has  ansible_facts['processor_cores']  cores"
+        msg: "The system has  {{ ansible_facts['processor_cores'] }} cores"
 
